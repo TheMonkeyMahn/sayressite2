@@ -1,0 +1,197 @@
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-2500px);
+  }
+
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+body {
+    text-align: center;
+    background-color: black;
+    background-image: url(media/img/andromeda.png);
+    color: #ffffff;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: #000000 0 0 5px, #000000 0 0 15px, #000000 0 0 25px;
+}
+
+a, p, h1, h2, h3, h4, h5, h6 {
+    color: #ffffff;
+}
+
+.main {
+    border-style: solid;
+    border-color: rgb(128, 128, 128, 0.2);
+    background-image: linear-gradient(45deg, rgba(0, 255, 0, 0.05) 10%, rgb(255, 255, 0, 0.05) 35%, rgb(255, 0, 0, 0.05) 65%, rgb(0, 0, 255, 0.05) 100%);
+    backdrop-filter: blur(4px);
+    border-radius: 15px;
+}
+
+.circle {
+    height: 7.5px;
+    width: 7.5px;
+    border-radius: 7.5px;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    translate: 0%, 10%;
+    filter: blur(0px)
+}
+
+.title {
+    animation-name: slideInLeft;
+    animation-duration: 2.5s;
+    animation-timing-function: ease-out;
+    animation-delay: 0;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    transform: translate(10000px);
+}
+
+div.main {
+    width: 95%;
+    height: 85%;
+    margin: auto;
+    translate: 0%, -10%;
+}
+
+img {
+    border-radius: 15px;
+    border-width: 3px;
+    border-style: solid;
+    border-color: rgb(128, 128, 128, 0.5);
+}
+
+button {
+    border-radius: 15px;
+    border-style: solid;
+    border-color: rgba(57, 57, 57, 0.75);
+    background-image: linear-gradient(45deg, rgba(0, 123, 255, 0.5) 40%, rgb(0, 0, 255) 100%);
+    color: #ffffff;
+    text-shadow: #000000 0 0 5px;
+    font-size: 15px;
+    transition: 1.5s;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button:hover, button:focus {
+    transform: translateY(-7.5px);
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(0deg, rgb(101, 0, 159, 0.5) 40%, rgba(13, 0, 255, 0.5) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(0deg, rgb(101, 0, 159) 40%, rgba(13, 0, 255) 100%);
+    border-radius: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #8a8aff;
+    transition: 2.5s;
+}
+
+a:hover {
+    text-decoration: wavy;
+    color: #ffa2ff;
+    text-shadow: #ffffff 0 0 10px;
+    transition: 1s;
+    /* <- nice */
+}
+
+.overlay {
+    width: 100%;
+    height: 0;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    backdrop-filter: blur(7.5px);
+    background-color: rgb(0, 0, 0, 0.5);
+    overflow-y: hidden;
+    transition: 0.5s ease-in;
+}
+
+.overlay-content {
+    position: relative;
+    top: 17.5%;
+    width: 100%;
+    margin-top: 30px;
+}
+
+.overlay a {
+    padding: 8px;
+    text-decoration: none;
+    font-size: 35px;
+    color: #818181;
+    display: block;
+    transition: 4s;
+}
+
+.overlay a:hover, .overlay a:focus {
+    color: #f1f1f1;
+    font-size: 45;
+    transition: 2.5s;
+}
+
+.overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+}
+
+#open {
+    padding-top: 10px;
+    font-size: 25px;
+    font-family: sans-serif;
+    color: #d6f3ff;
+    transition: 2.5s;
+}
+
+#open:hover {
+    font-size: 30px;
+    color: #ffffff;
+    text-shadow: #ffffff 0 0 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.youalreadyhere {
+    color: rgb(255, 93, 93);
+}
+
+
+/* What're you doing here? Just curious? The dev? Need some inspiration? Either way, I'll leave you to it. */
+
+
+/* Useful stuff:
+
+display:inline-block;
+linear-gradient(angledeg, rgba(blah, blah, blah, transparency) how much of the gradient this color is%)
+
+*/
