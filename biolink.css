@@ -41,25 +41,29 @@ a {
 }
 
 button {
-    /* other button styles */
-    position: relative;
-    left: -25px;
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    background-color: #632c88;
+    border-color: #8857a9;
+    border-style: groove;
+    border-width: 2.5px;
+    transition: 1s;
+    border-radius: 5px;
+    color: white;
+    text-shadow: #000000 0 0 10px;
+    box-sizing: content-box;
+    offset: -25px;
+    float: right;
+    font-family: monospace;
 }
-button::before {
-    content: "";
-    display: block;
-    position: absolute;
-    width: 25px;
-    height: 100%;
-    top: 0;
-    left: -25px;
-}
+
 button:hover {
-    /* other button hover styles */
-    transform: translateX(25px);
-}
-button:hover::before {
-    left: 0;
+    background-color: #e9c8ff;
+    transform: translateY(-10px);
+    transition: 1s;
 }
 
 button > a {
