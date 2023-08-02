@@ -55,7 +55,7 @@ button {
     color: white;
     text-shadow: #000000 0 0 10px;
     box-sizing: content-box;
-    transform: translateX(-25px);
+    offset: -25px;
     float: right;
     font-family: monospace;
 }
@@ -64,7 +64,6 @@ button:hover {
     background-color: #e9c8ff;
     transform: translateY(-10px);
     transition: 1s;
-    transform: translateX(-25px);
 }
 
 button > a {
