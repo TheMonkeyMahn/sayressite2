@@ -64,6 +64,7 @@ button:hover {
     background-color: #e9c8ff;
     transform: translateY(-10px);
     transition: 1s;
+    transform: translateX(-25px);
 }
 
 button > a {
