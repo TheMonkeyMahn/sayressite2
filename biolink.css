@@ -58,6 +58,7 @@ button {
     offset: -25px;
     float: right;
     font-family: monospace;
+    left: -25px;
 }
 
 button:hover {
