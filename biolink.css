@@ -55,15 +55,29 @@ button {
     color: white;
     text-shadow: #000000 0 0 10px;
     box-sizing: content-box;
-    offset: -25px;
     float: right;
     font-family: monospace;
+    position: relative;
+    left: -25px; /* offset button on x-axis by -25px */
+}
+
+button::before {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 25px;
+    height: 100%;
+    top: 0;
+    left: -25px; /* offset pseudo-element on x-axis by -25px */
 }
 
 button:hover {
     background-color: #e9c8ff;
-    transform: translateY(-10px);
-    transition: 1s;
+    transform: translateX(25px); /* move button 25px to the right to cancel the left offset */
+}
+
+button:hover::before {
+    left: 0; /* move pseudo-element to the right to align it with the left edge of the button */
 }
 
 button > a {
