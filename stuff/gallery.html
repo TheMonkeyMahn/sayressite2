@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/img/funny-dance.gif" type="image/gif">
+    <link rel="stylesheet" href="gallery.css">
+    <script>
+        const track = document.getElementById("track");
+
+/* window.onmousedown = e => {
+    track.dataset.mouseDownAt = e.clientX;
+} */
+
+window.onmousemove = e => {
+    if(track.dataset.mouseDownAt === "0") return;
+
+    const mouseDelta = parseFloat(track.dataset.mouseDownAt) - e.clientX,
+          maxDelta = window.innerwidth / 2;
+
+    const percentage = (mouseDelta / maxDelta) * -100;
+
+    track.style.transform = `translate(${percentage}%, -50%)`;
+}
+    </script>
+    <title>gallery | sayre.rf.gd</title>
+</head>
+<body>
+    <div id="track" data-mouse-down-at="0">
+        <img class="image" src="media/img/dexter.jpg" draggable="false" />
+        <img class="image" src="media/img/pickles.jpg" draggable="false" />
+        <img class="image" src="media/img/20170718_110812.jpg" draggable="false" />
+        <img class="image" src="media/img/20170718_111457.jpg" draggable="false" />
+        <img class="image" src="media/img/20190302_102000.jpg" draggable="false" />
+        <img class="image" src="media/img/20190719_151020.jpg" draggable="false" />
+    </div>
+</body>
+</html>

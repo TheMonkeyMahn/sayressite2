@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="media/img/funny-dance.gif" type="image/gif">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js"></script>
+<!--  <script src="mousetrail.js"></script>  -->
+</head>
+<body><br />
+
+<div id="nav" class="overlay">
+    <a href="javascript:void(0)" class="close" onclick="closeNav()">&times;</a>
+    <div class="overlay-content">
+        <a href="#" class="youalreadyhere">home</a>
+        <a href="#">games</a>
+        <a href="#">i dont even know</a>
+        <a href="#">about me</a>
+    </div>
+</div>
+<div class="main">
+    <span onclick="openNav()" id="open">pages</span><hr />
+    <h1 class="title">THEMONKEYMAHN</h1>
+    <p>lorum ipsum or something idk</p>
+    <p>lorum ipsum or something idk</p>
+    <p>lorum ipsum or something idk</p>
+    <p>lorum ipsum or something idk</p>
+    <p>lorum ipsum or something idk</p>
+    <button class="btn" onclick="alert('i said dont press')">DONT PRESS!</button><br /><br />
+    <a href="media/img/pickles.jpg" target="_blank">pickles dog</a><br /><br />
+    <img src="media/img/dexter.jpg" width="350">
+</div>
+</body>
+</html>
+
+
+<!-- What're you doing here? Just curious? The dev? Need some inspiration? Either way, I'll leave you to it. <div id="blob"></div>-->
+
+<script>
+    const coords = { x: 0, y: 0 };
+const circles = document.querySelectorAll(".circle");
+
+circles.forEach(function (circle) {
+    circle.x = 0;
+    circle.y = 0;
+});
+
+window.addEventListener("mousemove", function(e){
+    coords.x = e.clientX;
+    coords.y = e.clientY;
+
+    circles.forEach(function (circle, index) {
+      circle.style.left = coords.x + "px";
+      circle.style.top = coords.y + "px";
+    });
+
+}); 
+</script>

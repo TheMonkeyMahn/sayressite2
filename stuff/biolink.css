@@ -1,0 +1,97 @@
+body {
+    background-color: #181818;
+    color: #ffffff;
+    font-family:'Segoe UI';
+    padding: 0;
+    margin: 0;
+    text-shadow: #000751 2px -2px 0px;
+    box-sizing: border-box;
+}
+
+section {
+    display: grid;
+    place-items: center;
+    align-content: center;
+    min-height: 100vh;
+}
+
+h1 {
+    text-align: center;
+}
+
+a {
+    color: lightblue;
+    text-decoration: none;
+    padding-bottom: 10px;
+    text-decoration: none;
+}
+
+.hidden {
+    opacity: 0;
+    filter: blur(5px);
+    transform: translateX(-100px);
+    transition: 2.5s;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateX(0);
+    transition: 2.5s;
+}
+
+button {
+    text-align: center;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+    background-color: #632c88;
+    border-color: #8857a9;
+    border-style: groove;
+    border-width: 2.5px;
+    transition: 1s;
+    border-radius: 5px;
+    color: white;
+    text-shadow: #000000 0 0 10px;
+    box-sizing: content-box;
+    transform: translateX(-50);
+    float: right;
+    font-family: monospace;
+}
+
+button:hover {
+    background-color: #e9c8ff;
+    transform: translateY(-10px);
+    transition: 1s;
+}
+
+button > a {
+    color: white;
+}
+
+html {
+    scroll-behavior: smooth;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+button:hover, button:focus {
+    transform: translateY(-7.5px);
+    transition: 0.5s;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-image: linear-gradient(0deg, rgb(101, 0, 159, 0.5) 40%, rgba(13, 0, 255, 0.5) 100%);
+}
+
+::-webkit-scrollbar-thumb {
+    background-image: linear-gradient(0deg, rgb(101, 0, 159) 40%, rgba(13, 0, 255) 100%);
+    border-radius: 10px;
+    box-shadow: #000000;
+}
+
