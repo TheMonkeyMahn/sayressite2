@@ -1,5 +1,5 @@
 window.onload = function animateTitle() {
-    var titleText = "sayre.rf.gd";
+    var titleText = "sayreswebsite";
 var currentWord = titleText;
 var currentCharIndex = 0;
 var direction = 1;
